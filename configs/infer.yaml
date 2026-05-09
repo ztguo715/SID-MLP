@@ -1,0 +1,17 @@
+dataset: AmazonReviews2023
+category: Musical_Instruments
+dataset_tag: AmazonReviews2023_Musical_Instruments
+
+batch_size: 32     # Hardware profile uses batch size 32
+beam_size: 50      # Hardware profile uses B=50
+final_top_n: 50
+split: test
+
+d1_temp: 1.0
+d2_temp: 1.0
+d3_temp: 1.0
+d4_temp: 1.0
+alpha_d2: 1.0
+gamma_d3: 1.0
+delta_d4: 1.0
+fp32: false

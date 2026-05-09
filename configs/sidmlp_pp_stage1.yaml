@@ -1,0 +1,12 @@
+batch_size: 512
+d_model: 128
+ffn_dim: 2048      # sweep: {256, 512, 1024, 2048, 4096, 8192}
+num_layers: 4      # sweep: {1, 2, 4, 6, 8}
+dropout: 0.1
+lr: 1e-3           # sweep: {5e-4, 1e-3}
+weight_decay: 1e-4 # sweep: {0, 1e-4, 1e-3}
+epochs: 300
+grad_clip: 1.0
+gpu_resident: true
+storage_fp16: false
+num_workers: 0

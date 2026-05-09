@@ -1,0 +1,24 @@
+name: TIGER_env
+channels:
+  - defaults
+dependencies:
+  - python=3.10.18
+  - pip=25.1
+  - pip:
+      - torch==2.7.1
+      - accelerate==1.8.1
+      - datasets==3.6.0
+      - faiss-gpu==1.7.2
+      - huggingface-hub==0.33.1
+      - numpy==1.26.4
+      - pandas==2.3.0
+      - PyYAML==6.0.2
+      - scikit-learn==1.7.0
+      - scipy==1.15.3
+      - sentence-transformers==4.1.0
+      - sentencepiece==0.2.1
+      - tensorboard==2.19.0
+      - tiktoken==0.11.0
+      - tokenizers==0.21.2
+      - tqdm==4.67.1
+      - transformers==4.53.0

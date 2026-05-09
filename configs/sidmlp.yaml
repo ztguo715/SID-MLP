@@ -1,0 +1,28 @@
+dataset: AmazonReviews2023
+category: Musical_Instruments
+dataset_tag: AmazonReviews2023_Musical_Instruments
+val_dataset_tag: AmazonReviews2023_Musical_Instruments_val
+
+num_heads: 4       # sweep: {2, 4, 8}
+attn_dim: 384      # sweep: {128, 256, 384, 512}
+ffn_dim: 1024
+head_hidden: 512   # sweep: {128, 256, 512, 768, 1024, 1536, 2048}
+head_layers: 1
+dropout: 0.2       # sweep: {0.1, 0.2}
+loss: combined     # choices: kl, ce, combined
+temperature: 1.0
+alpha: 0.7         # sweep: {0, 0.3, 0.5, 0.7, 0.8, 1.0}
+d4_teacher: combined # choices: kl, ce, combined
+
+lr: 5e-5           # sweep: {1e-5, 5e-5, 1.25e-4, 2.5e-4, 5e-4}
+weight_decay: 1e-4 # sweep: {0, 1e-4, 1e-3}
+epochs: 300
+batch_size: 512
+val_batch_size: 32
+beam_size: 50
+final_top_n: 50
+grad_clip: 1.0
+storage_fp16: false
+seed: 42
+
+run_tag: h4_ad384_hhid512_a07_d4combined_lr5e5_dp02

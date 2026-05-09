@@ -1,0 +1,4 @@
+category: null  # Must be specified via command line or auto-detected from checkpoint
+metadata: sentence  # none / raw / sentence
+split: last_out # last_out / timestamp
+kcore: 5core    # 5core / 0core
