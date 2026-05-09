@@ -2,7 +2,7 @@
 
 This repository provides the implementation for **MLPs are Efficient Distilled Generative Recommenders**.
 
-In this work, we address the high inference latency bottleneck of autoregressive decoding in Generative Recommendation (GR) models using Semantic IDs. We introduce SID-MLP, a lightweight distillation framework that eliminates dense attention overhead by distilling heavy autoregressive teachers into position-specific MLP heads. We further propose SID-MLP++, extending this framework to replace the Transformer encoder entirely, demonstrating an 8.74$\times$ inference acceleration while preserving plug-and-play compatibility and teacher-level accuracy.
+In this work, we address the high inference latency bottleneck of autoregressive decoding in Generative Recommendation (GR) models using Semantic IDs. We introduce SID-MLP, a lightweight distillation framework that eliminates dense attention overhead by distilling heavy autoregressive teachers into position-specific MLP heads. We further propose SID-MLP++, extending this framework to replace the Transformer encoder entirely, demonstrating an 8.74x inference acceleration while preserving plug-and-play compatibility and teacher-level accuracy.
 
 ## Resources
 
@@ -19,6 +19,14 @@ teacher assets under `MODEL_DIR` with this layout:
   TIGER-AmazonReviews2023-category_<category>.pth
   semantic_ids/
     AmazonReviews2023-<category>_sentence-t5-base_256,256,256,256.sem_ids
+```
+
+Released TIGER teacher checkpoints and semantic IDs for `Musical_Instruments`,
+`Industrial_and_Scientific`, and `Video_Games` are available at
+[`ztguo/SID-MLP`](https://huggingface.co/ztguo/SID-MLP):
+
+```bash
+huggingface-cli download ztguo/SID-MLP --repo-type model --local-dir $MODEL_DIR
 ```
 
 All data, checkpoint, feature, and output paths are passed through launcher
