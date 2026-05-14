@@ -1,6 +1,6 @@
 # SID-MLP
 
-This repository provides the implementation for **MLPs are Efficient Distilled Generative Recommenders**.
+This repository provides the implementation for our paper: [**MLPs are Efficient Distilled Generative Recommenders**](https://arxiv.org/abs/2605.12617).
 
 In this work, we address the high inference latency bottleneck of autoregressive decoding in Generative Recommendation (GR) models using Semantic IDs. We introduce SID-MLP, a lightweight distillation framework that eliminates dense attention overhead by distilling heavy autoregressive teachers into position-specific MLP heads. We further propose SID-MLP++, extending this framework to replace the Transformer encoder entirely, demonstrating an 8.74x inference acceleration while preserving plug-and-play compatibility and teacher-level accuracy.
 
